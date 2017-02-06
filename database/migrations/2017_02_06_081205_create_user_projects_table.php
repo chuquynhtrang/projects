@@ -17,8 +17,9 @@ class CreateUserProjectsTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->integer('project_id');
+            $table->boolean('status');
             $table->integer('progress')->nullable();
-            $table->string('document');
+            $table->string('document')->nullable();
             $table->timestamps();
         });
     }
